@@ -1,0 +1,32 @@
+﻿@model HospitalManagementSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <h1>Appointment Details</h1>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.ID</dd>
+
+        <dt class="col-sm-3">Date</dt>
+        <dd class="col-sm-9">@Model.Date.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Time</dt>
+        <dd class="col-sm-9">@Model.Time.ToShortTimeString()</dd>
+
+        <dt class="col-sm-3">Doctor</dt>
+        <dd class="col-sm-9">@Model.Doctor.Name</dd>
+
+        <dt class="col-sm-3">Patient</dt>
+        <dd class="col-sm-9">@Model.Patient.Name</dd>
+
+        <dt class="col-sm-3">Staff</dt>
+        <dd class="col-sm-9">@Model.Staff.Name</dd>
+    </dl>
+    <div class="form-group">
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+</div>
